@@ -28,19 +28,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-Zc-nMj">
-                                <rect key="frame" x="153" y="318.5" width="69" height="30"/>
+                                <rect key="frame" x="153" y="629" width="69" height="30"/>
                                 <state key="normal" title="Say Hello!"/>
                                 <connections>
                                     <action selector="didTapSayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbD-C1-x7o"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelloWorld" translatesAutoresizingMaskIntoConstraints="NO" id="JCi-I4-Q5D">
+                                <rect key="frame" x="0.0" y="-166.5" width="375" height="1000"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="a9h-eJ-to0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPG-at-Fto">
+                                <rect key="frame" x="117" y="49" width="141" height="30"/>
+                                <state key="normal" title="Next View Controller"/>
+                                <connections>
+                                    <segue destination="eQl-fg-HN7" kind="show" identifier="segue_SecondView" id="DhJ-FQ-7VO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lPG-at-Fto" firstAttribute="centerX" secondItem="JCi-I4-Q5D" secondAttribute="centerX" id="96M-eU-fBx"/>
+                            <constraint firstItem="JCi-I4-Q5D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QQs-iR-aUb"/>
                             <constraint firstItem="OcX-jn-96y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qsa-LD-YMR"/>
                             <constraint firstItem="MtZ-Zc-nMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Shs-Xz-sVD"/>
-                            <constraint firstItem="MtZ-Zc-nMj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lwe-ef-Zg0"/>
+                            <constraint firstItem="JCi-I4-Q5D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qfE-r3-gvZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MtZ-Zc-nMj" secondAttribute="bottom" constant="8" symbolic="YES" id="str-mg-cCA"/>
                             <constraint firstItem="OcX-jn-96y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vHG-L7-dg3"/>
+                            <constraint firstItem="lPG-at-Fto" firstAttribute="top" secondItem="OcX-jn-96y" secondAttribute="bottom" constant="8" id="wGb-uR-9U4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -49,6 +66,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="dWl-Q1-6OM">
+            <objects>
+                <viewController id="eQl-fg-HN7" customClass="SecondViewController" customModule="Example_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m5G-FJ-9kY"/>
+                        <viewControllerLayoutGuide type="bottom" id="35Q-8D-C1P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4xd-i2-Xc7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGO-CB-3UZ">
+                                <rect key="frame" x="160" y="318" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="didTapDismiss:" destination="eQl-fg-HN7" eventType="touchUpInside" id="Apk-BV-wtd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ot-nq-wNC">
+                                <rect key="frame" x="166.5" y="76" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TGO-CB-3UZ" firstAttribute="centerX" secondItem="4xd-i2-Xc7" secondAttribute="centerX" id="e3W-Pu-Xt0"/>
+                            <constraint firstItem="TGO-CB-3UZ" firstAttribute="centerY" secondItem="4xd-i2-Xc7" secondAttribute="centerY" id="l6A-dX-y3d"/>
+                            <constraint firstItem="2Ot-nq-wNC" firstAttribute="centerX" secondItem="4xd-i2-Xc7" secondAttribute="centerX" id="xR6-SN-5Va"/>
+                            <constraint firstItem="2Ot-nq-wNC" firstAttribute="top" secondItem="m5G-FJ-9kY" secondAttribute="bottom" constant="56" id="xth-yS-yxM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="display" destination="2Ot-nq-wNC" id="5B9-MT-Ieg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3G4-i4-dKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5999999999999" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HelloWorld" width="2000" height="1000"/>
+    </resources>
 </document>
