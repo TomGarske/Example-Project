@@ -26,6 +26,10 @@ class SecondViewController: UIViewController {
     }
     */
 
+    override func viewWillAppear(_ animated: Bool) {
+        trackScreenView(screenName: "Second Screen")
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

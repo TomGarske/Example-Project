@@ -31,6 +31,20 @@ class Example_ProjectUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+
+        let app = XCUIApplication()
+
+        //CHECK DEFAULT
+        app.buttons["Next View Controller"].tap()
+        XCTAssert(app.staticTexts["This is a label!"].exists)
+        app.buttons["Dismiss"].tap()
+
+        //CHECK CHANGES
+        app.buttons["Say Hello!"].tap()
+        XCTAssert(app.staticTexts["Hello World!"].exists)
+        app.buttons["Next View Controller"].tap()
+        XCTAssert(app.staticTexts["Hello World!"].exists)
     }
     
 }
