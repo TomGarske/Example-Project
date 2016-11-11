@@ -11,9 +11,12 @@ import Google
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var version: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let dict = Bundle.main.infoDictionary!
+        let versionString = (dict["CFBundleShortVersionString"] as! String) + "." + (dict["CFBundleVersion"] as? String)!
+        version.text = versionString
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -23,6 +26,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
     @IBAction func didTapSayHello(_ sender: Any) {
         helloLabel.text = "Hello World!"
+        //poorlyWrittenFunction(arbitraryNumber:4)
+    }
+
+    func poorlyWrittenFunction(arbitraryNumber:UInt32) {
+        var temp : Double = 0
+        for x in 0...arbitraryNumber*10000000 {
+            let dub = Double(x)
+            temp += dub*dub
+        }
     }
 
     override func didReceiveMemoryWarning() {

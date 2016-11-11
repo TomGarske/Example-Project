@@ -21,6 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelloWorld" translatesAutoresizingMaskIntoConstraints="NO" id="JCi-I4-Q5D">
+                                <rect key="frame" x="0.0" y="-167" width="375" height="1000"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="a9h-eJ-to0"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a label!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcX-jn-96y">
                                 <rect key="frame" x="133" y="20" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,12 +40,6 @@
                                     <action selector="didTapSayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbD-C1-x7o"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelloWorld" translatesAutoresizingMaskIntoConstraints="NO" id="JCi-I4-Q5D">
-                                <rect key="frame" x="0.0" y="-166.5" width="375" height="1000"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="a9h-eJ-to0"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPG-at-Fto">
                                 <rect key="frame" x="117" y="49" width="141" height="30"/>
                                 <state key="normal" title="Next View Controller"/>
@@ -47,10 +47,17 @@
                                     <segue destination="eQl-fg-HN7" kind="show" identifier="segue_SecondView" id="DhJ-FQ-7VO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRr-uR-579">
+                                <rect key="frame" x="0.0" y="638" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lPG-at-Fto" firstAttribute="centerX" secondItem="JCi-I4-Q5D" secondAttribute="centerX" id="96M-eU-fBx"/>
+                            <constraint firstItem="gRr-uR-579" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gdu-I1-I6p"/>
                             <constraint firstItem="JCi-I4-Q5D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QQs-iR-aUb"/>
                             <constraint firstItem="OcX-jn-96y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qsa-LD-YMR"/>
                             <constraint firstItem="MtZ-Zc-nMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Shs-Xz-sVD"/>
@@ -58,10 +65,12 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MtZ-Zc-nMj" secondAttribute="bottom" constant="8" symbolic="YES" id="str-mg-cCA"/>
                             <constraint firstItem="OcX-jn-96y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vHG-L7-dg3"/>
                             <constraint firstItem="lPG-at-Fto" firstAttribute="top" secondItem="OcX-jn-96y" secondAttribute="bottom" constant="8" id="wGb-uR-9U4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gRr-uR-579" secondAttribute="bottom" constant="8" id="zdn-wY-Mjm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="helloLabel" destination="OcX-jn-96y" id="UiM-Ew-iE8"/>
+                        <outlet property="version" destination="gRr-uR-579" id="wA0-B2-xjp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
