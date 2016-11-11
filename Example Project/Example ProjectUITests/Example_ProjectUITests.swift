@@ -46,5 +46,10 @@ class Example_ProjectUITests: XCTestCase {
         app.buttons["Next View Controller"].tap()
         XCTAssert(app.staticTexts["Hello World!"].exists)
     }
-    
+
+    func testFailExample() {
+        let app = XCUIApplication()
+        //This will fail
+        XCTAssert(app.staticTexts["Hello World!"].exists)
+    }
 }
