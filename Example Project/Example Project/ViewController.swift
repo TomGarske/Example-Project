@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         helloLabel.text = "Hello World!"
 
        // DispatchQueue.global(qos: .background).async {
-            self.poorlyWrittenFunction(arbitraryNumber:4)
+       //     self.poorlyWrittenFunction(arbitraryNumber:4)
        // }
     }
 
