@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dict = Bundle.main.infoDictionary!
-        let versionString = (dict["CFBundleShortVersionString"] as! String) + "." + (dict["CFBundleVersion"] as? String)!
+        let versionString = (dict["CFBundleShortVersionString1"]! as? String)! + "."
+            + (dict["CFBundleVersion1"] as? String)!
         version.text = versionString
 
         //let image = UIImage(named: "HelloWorld")
@@ -29,9 +30,9 @@ class ViewController: UIViewController {
     @IBAction func didTapSayHello(_ sender: Any) {
         helloLabel.text = "Hello World!"
 
-       // DispatchQueue.global(qos: .background).async {
-       //     self.poorlyWrittenFunction(arbitraryNumber:4)
-       // }
+        DispatchQueue.global(qos: .background).async {
+            self.poorlyWrittenFunction(arbitraryNumber:4)
+        }
     }
 
     func poorlyWrittenFunction(arbitraryNumber:UInt32) {
